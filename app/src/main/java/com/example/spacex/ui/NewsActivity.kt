@@ -1,28 +1,31 @@
-package com.example.spacex
+package com.example.spacex.ui
 
 import LaunchDetailsQuery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.ApolloClient
-import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.coroutines.toDeferred
 import com.apollographql.apollo.exception.ApolloException
-import kotlinx.android.synthetic.*
+import com.example.spacex.MyApplication
+import com.example.spacex.R
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class NewsActivity : AppCompatActivity() {
-    private lateinit var client: ApolloClient
+    @Inject
+    lateinit var client: ApolloClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        client = setUpApolloClient()
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
         scope.launch {
@@ -45,18 +48,6 @@ class NewsActivity : AppCompatActivity() {
         }
     }
 
-    private fun setUpApolloClient(): ApolloClient {
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
-        val okHttp = OkHttpClient
-            .Builder()
-            .addInterceptor(logging)
-        return ApolloClient.builder()
-            .serverUrl("http://172.16.0.112:3000/graphql")
-            .okHttpClient(okHttp.build()) //ApolloClient with okhttp
-            .build()
-
-    }
 
 
 }
