@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sky_dots"
     tools:context=".ui.activity.SplashScreen">
 
     <androidx.constraintlayout.widget.Guideline
@@ -14,6 +13,12 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.7"/>
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/optional_horizontal_guidline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"/>
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guidline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,13 +26,23 @@
         app:layout_constraintGuide_percent="0.4"/>
 
     <ImageView
-        android:id="@+id/man_logo"
+        android:id="@+id/bottom_moon"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/aust"
+        android:src="@drawable/bottom_moon"
         app:layout_constraintTop_toTopOf="@id/horizontal_guidline"
         app:layout_constraintStart_toStartOf="@id/vertical_guidline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/left_moon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/left_moon"
+        app:layout_constraintTop_toTopOf="@id/optional_horizontal_guidline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guidline"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_guidline"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
