@@ -1,4 +1,4 @@
-package com.example.spacex.ui
+package com.example.spacex.ui.activity
 
 import LaunchDetailsQuery
 import androidx.appcompat.app.AppCompatActivity
