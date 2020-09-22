@@ -79,5 +79,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/second_vertical_guidline"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SpaceX"
+        app:layout_constraintStart_toStartOf="@id/second_vertical_guidline"
+        app:layout_constraintTop_toTopOf="@id/second_optional_horizontal_guidline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
