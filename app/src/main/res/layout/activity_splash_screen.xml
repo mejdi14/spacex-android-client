@@ -13,7 +13,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.7"/>
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/optional_horizontal_guidline"
+        android:id="@+id/first_optional_horizontal_guidline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_optional_horizontal_guidline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -24,6 +30,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.4"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_vertical_guidline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
 
     <ImageView
         android:id="@+id/bottom_moon"
@@ -39,10 +51,33 @@
         android:id="@+id/left_moon"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="fitStart"
         android:src="@drawable/left_moon"
-        app:layout_constraintTop_toTopOf="@id/optional_horizontal_guidline"
+        app:layout_constraintTop_toTopOf="@id/second_optional_horizontal_guidline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/vertical_guidline"
-        app:layout_constraintBottom_toBottomOf="@id/horizontal_guidline"/>
+        app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
 
+    <ImageView
+        android:id="@+id/top_moon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/upper_moon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/second_vertical_guidline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
+    <ImageView
+        android:id="@+id/moon_man"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/moon_man"
+        android:rotationY="180"
+        app:layout_constraintTop_toTopOf="@id/first_optional_horizontal_guidline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/second_vertical_guidline"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
