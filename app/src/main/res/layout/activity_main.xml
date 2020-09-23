@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_backgroud"
+    android:padding="20dp"
     tools:context=".ui.activity.NewsActivity">
+
+    <TextView
+        android:id="@+id/main_activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add names"
+        android:textSize="26dp" app:layout_constraintBottom_toTopOf="@id/main_activity_input_names"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/main_activity_input_names"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@id/epoxyList"
+        app:layout_constraintEnd_toStartOf="@id/main_activity_ok_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_activity_title" />
+
+    <Button
+        android:id="@+id/main_activity_ok_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_activity_title"         />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/epoxyList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_activity_input_names" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
