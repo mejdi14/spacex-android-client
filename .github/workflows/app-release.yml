@@ -31,8 +31,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Run Kotlin Linter
-        run: bash ./gradlew ktlintStagingDebugCheck
+      - name: Run Kotlin klint
+        run: bash ./gradlew ktlintCheck
 
   apk:
     name: Generate APK
