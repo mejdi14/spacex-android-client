@@ -20,6 +20,20 @@ jobs:
       - name: Run Unit tests
         run: bash ./gradlew test --stacktrace
 
+
+  klint:
+    name: Klint Formating
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Run Kotlin Linter
+        run: ./gradlew ktlintStagingDebugCheck
+
   apk:
     name: Generate APK
     runs-on: ubuntu-18.04
