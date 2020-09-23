@@ -4,28 +4,56 @@ import LaunchDetailsQuery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.airbnb.epoxy.EpoxyController
+import com.airbnb.epoxy.EpoxyRecyclerView
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.coroutines.toDeferred
 import com.apollographql.apollo.exception.ApolloException
 import com.example.spacex.MyApplication
 import com.example.spacex.R
+import com.example.spacex.data.Entry
+import com.example.spacex.epoxy.entry
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import java.util.ArrayList
+import java.util.Map.entry
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class NewsActivity : AppCompatActivity() {
+    private var entries = mutableListOf<Entry>()
+
     @Inject
     lateinit var client: ApolloClient
+    lateinit var epoxyList: EpoxyRecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        epoxyList = findViewById(R.id.epoxyList)
+        main_activity_ok_btn.setOnClickListener {
+            val input = main_activity_input_names.text.toString()
+
+            if (!input.isBlank()) {
+                entries.add(Entry(input))
+
+                epoxyList.withModels {
+                    entries.forEach(fun(it: Entry) {
+                        entry {
+                            id(hashCode())
+                            name(it.name)
+                        }
+                    })
+                }
+                main_activity_input_names.text.clear()
+            }
+        }
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
         scope.launch {
@@ -44,10 +72,9 @@ class NewsActivity : AppCompatActivity() {
             Log.d("lauches", "onCreate: " + launch)
 
             // launch now contains a typesafe model of your data
-           // println("Launch site: ${launches.id}")
+            // println("Launch site: ${launches.id}")
         }
     }
-
 
 
 }

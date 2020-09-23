@@ -73,7 +73,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="fitStart"
-        android:src="@drawable/moon_man"
+        android:translationX="-250dp"
+        android:translationY="200dp"
+        android:src="@drawable/final_moon_man"
         android:rotationY="180"
         app:layout_constraintTop_toTopOf="@id/first_optional_horizontal_guidline"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,11 +87,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SpaceX"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@id/second_vertical_guidline"
         app:layout_constraintTop_toTopOf="@id/second_optional_horizontal_guidline"
         app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="49dp"
         app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
