@@ -35,6 +35,7 @@ jobs:
         continue-on-error: true
         run: bash ./gradlew --no-daemon -Dorg.gradle.parallel=false -Dorg.gradle.configureondemand=false ktlintFormat
 
+
   apk:
     name: Generate APK
     runs-on: ubuntu-18.04
