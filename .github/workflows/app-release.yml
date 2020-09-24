@@ -90,3 +90,24 @@ jobs:
 
       - name: Run Instrumentation Tests in Firebase Test Lab
         run: gcloud firebase test android run --type instrumentation --app app-debug/app-debug.apk --test app-debug-androidTest/app-debug-androidTest.apk --device model=Pixel2,version=28,locale=pl,orientation=portrait
+
+
+  mail:
+    name: sending email to mejdi
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Android Github Action
+        uses: Vukan-Markovic/Github-Android-Action@1.2
+      - name: ✨ Send email, you star
+        uses: dawidd6/action-send-mail@v1.3.0
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: mejdiclubiste@gmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Your a star ✨
+          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
+          to: mejdiclubiste@gmail.com
+          from: mejdiclubiste@gmail.com
