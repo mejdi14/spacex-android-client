@@ -28,7 +28,7 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class NewsActivity : AppCompatActivity() {
-    private var entries = mutableListOf<Entry>()
+    private var entries = mutableListOf<Entry>(Entry("mejdi"), Entry("aymen"))
 
     @Inject
     lateinit var client: ApolloClient
@@ -37,23 +37,16 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         epoxyList = findViewById(R.id.epoxyList)
-        main_activity_ok_btn.setOnClickListener {
-            val input = main_activity_input_names.text.toString()
-
-            if (!input.isBlank()) {
-                entries.add(Entry(input))
 
                 epoxyList.withModels {
                     entries.forEach(fun(it: Entry) {
+                        Log.d("how many", ":${it} ")
                         entry {
                             id(hashCode())
                             name(it.name)
                         }
                     })
                 }
-                main_activity_input_names.text.clear()
-            }
-        }
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
         scope.launch {

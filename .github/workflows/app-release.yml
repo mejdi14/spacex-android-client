@@ -20,6 +20,21 @@ jobs:
       - name: Run Unit tests
         run: bash ./gradlew test --stacktrace
 
+
+  android_lint:
+    name: lint test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - run: ./gradlew lint
+      - uses: yutailang0119/action-android-lint@v1.0.2
+        with:
+          xml_path: build/reports/lint-results.xml
+
   apk:
     name: Generate APK
     runs-on: ubuntu-18.04
