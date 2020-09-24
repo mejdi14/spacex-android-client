@@ -21,18 +21,19 @@ jobs:
         run: bash ./gradlew test --stacktrace
 
 
-  klint:
-    name: Klint Formating
-    runs-on: ubuntu-18.04
-
+  android_lint:
+    name: lint test
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up JDK 1.8
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Run Kotlin klint
-        run: bash ./gradlew ktlintCheck
+      - run: ./gradlew lint
+      - uses: yutailang0119/action-android-lint@v1.0.2
+        with:
+          xml_path: build/reports/lint-results.xml
 
   apk:
     name: Generate APK
