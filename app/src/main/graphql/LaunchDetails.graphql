@@ -6,5 +6,8 @@ query LaunchDetails($id:ID!) {
             name
             missionPatch(size:LARGE)
         }
+        links{article_link
+            wikipedia
+            youtube_id}
     }
 }

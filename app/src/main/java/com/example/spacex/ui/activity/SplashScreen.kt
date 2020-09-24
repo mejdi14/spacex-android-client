@@ -18,7 +18,8 @@ class SplashScreen : AppCompatActivity() {
         moon_man.animate().translationX(0f).translationY(0f).setDuration(2700).start()
         Handler().postDelayed({
             startActivity(Intent(this, NewsActivity::class.java))
+            finish()
         }, 3000)
-        finish()
+
     }
 }
