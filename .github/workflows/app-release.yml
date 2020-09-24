@@ -95,7 +95,6 @@ jobs:
   mail:
     name: sending email to mejdi
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Android Github Action
