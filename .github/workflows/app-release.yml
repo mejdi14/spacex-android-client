@@ -107,5 +107,5 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: Your a star ✨
           body: ${{ github.actor }} just pushed to this repo!!! ${{ github.repository }}
-          to: mhafiane.ext@monkeyfactory.fr
+          to: mejdihafiane@gmail.com
           from: mejdiclubiste@gmail.com
