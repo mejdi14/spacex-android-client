@@ -105,7 +105,7 @@ jobs:
           server_port: 465
           username: mejdiclubiste@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: Your a star ✨
+          subject: hello 3ammi aymen ✨
           body: ${{ github.actor }} just pushed to this repo!!! ${{ github.repository }}
           to: mejdihafiane@gmail.com
           from: mejdiclubiste@gmail.com
