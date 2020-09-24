@@ -38,7 +38,6 @@ jobs:
   apk:
     name: Generate APK
     runs-on: ubuntu-18.04
-
     steps:
       - uses: actions/checkout@v1
       - name: Set up JDK 1.8
