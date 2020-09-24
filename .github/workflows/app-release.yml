@@ -106,6 +106,6 @@ jobs:
           username: mejdiclubiste@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: Your a star ✨
-          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
-          to: mejdiclubiste@gmail.com
+          body: ${{ github.actor }} just pushed to this repo!!! ${{ github.repository }}
+          to: mhafiane.ext@monkeyfactory.fr
           from: mejdiclubiste@gmail.com
