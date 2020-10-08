@@ -1,99 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/motion"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#040405"
+    app:layoutDescription="@xml/moon_scene"
     tools:context=".ui.activity.SplashScreen">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontal_guidline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7"/>
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/first_optional_horizontal_guidline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"/>
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/second_optional_horizontal_guidline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_guidline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4"/>
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/second_vertical_guidline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"/>
-
-    <ImageView
-        android:id="@+id/bottom_moon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:src="@drawable/bottom_moon"
-        app:layout_constraintTop_toTopOf="@id/horizontal_guidline"
-        app:layout_constraintStart_toStartOf="@id/vertical_guidline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <ImageView
-        android:id="@+id/left_moon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/left_moon"
-        app:layout_constraintTop_toTopOf="@id/second_optional_horizontal_guidline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/vertical_guidline"
-        app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
-
-    <ImageView
-        android:id="@+id/top_moon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/upper_moon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/second_vertical_guidline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
-    <ImageView
-        android:id="@+id/moon_man"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="fitStart"
-        android:translationX="-250dp"
-        android:translationY="200dp"
-        android:src="@drawable/final_moon_man"
-        android:rotationY="180"
-        app:layout_constraintTop_toTopOf="@id/first_optional_horizontal_guidline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/second_vertical_guidline"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
     <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SpaceX"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@id/second_vertical_guidline"
-        app:layout_constraintTop_toTopOf="@id/second_optional_horizontal_guidline"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="S\nP\nA\nC\nE\nX"
+        android:textColor="#FFFFFF"
+        android:textSize="60dp"
+        android:gravity="center"
+        android:fontFamily="@font/space_font"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textStyle="bold"
-        android:textSize="49dp"
-        app:layout_constraintBottom_toBottomOf="@id/first_optional_horizontal_guidline"/>
+        app:layout_constraintBottom_toTopOf="@id/mars"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+   <ImageView
+       android:id="@+id/mars"
+       android:layout_width="500dp"
+       android:layout_height="500dp"
+       android:src="@drawable/round_shape"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:translationY="60dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="parent"/>
 
+</androidx.constraintlayout.motion.widget.MotionLayout>
