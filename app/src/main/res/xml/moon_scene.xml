@@ -7,7 +7,7 @@
         app:duration="2000">
 
         <OnClick
-            app:mode="transitionToEnd"
+            app:clickAction="transitionToEnd"
             />
 
         <KeyFrameSet></KeyFrameSet>
@@ -52,16 +52,50 @@
             app:layout_constraintBottom_toBottomOf="@id/mars"
             app:layout_constraintEnd_toEndOf="@id/mars"
             app:layout_constraintStart_toStartOf="@id/mars"
-            app:layout_constraintTop_toTopOf="@id/mars" />
+            app:layout_constraintTop_toTopOf="@id/mars"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp" />
 
         <Constraint
             android:id="@+id/mars"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
             android:src="@drawable/round_shape"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-             />
+            app:layout_constraintBottom_toBottomOf="parent" />
     </ConstraintSet>
+    <ConstraintSet android:id="@+id/explode" >
+    <Constraint
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/space_font"
+        android:gravity="center"
+        android:text="S\nP\nA\nC\nE\nX"
+        android:textColor="#FFFFFF"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
+
+    <Constraint
+        android:id="@+id/mars"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/round_shape"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+    </ConstraintSet>
+    <Transition
+        app:constraintSetStart="@+id/collapsed"
+        app:constraintSetEnd="@+id/explode" >
+        <OnClick />
+    </Transition>
 </MotionScene>

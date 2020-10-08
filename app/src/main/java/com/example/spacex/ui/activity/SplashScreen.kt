@@ -15,7 +15,7 @@ class SplashScreen : AppCompatActivity() {
        // showTheMoonManWithMagic()
         Handler().postDelayed({
             motion.transitionToEnd()
-        }, 3000)
+        }, 2000)
     }
 
     private fun showTheMoonManWithMagic() {
