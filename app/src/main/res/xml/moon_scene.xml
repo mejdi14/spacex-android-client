@@ -87,10 +87,11 @@
 
     <Constraint
         android:id="@+id/mars"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:src="@drawable/round_shape"
+        android:layout_width="4000dp"
+        android:layout_height="4000dp"
+        android:src="@drawable/simple_shape"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
          />
@@ -98,7 +99,8 @@
     <Transition
         android:id="@+id/second"
         app:constraintSetStart="@+id/collapsed"
-        app:constraintSetEnd="@+id/explode" >
+        app:constraintSetEnd="@+id/explode"
+        app:duration="1000">
         <OnClick
             app:clickAction="transitionToEnd"
             />
