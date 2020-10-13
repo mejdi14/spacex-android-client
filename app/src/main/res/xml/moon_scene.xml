@@ -2,6 +2,7 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Transition
+        android:id="@+id/first"
         app:constraintSetEnd="@id/collapsed"
         app:constraintSetStart="@id/expanded"
         app:duration="2000">
@@ -76,6 +77,7 @@
         android:text="S\nP\nA\nC\nE\nX"
         android:textColor="#FFFFFF"
         android:textSize="60dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/mars"
         app:layout_constraintEnd_toEndOf="@id/mars"
         app:layout_constraintStart_toStartOf="@id/mars"
@@ -88,14 +90,17 @@
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:src="@drawable/round_shape"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
          />
     </ConstraintSet>
     <Transition
+        android:id="@+id/second"
         app:constraintSetStart="@+id/collapsed"
         app:constraintSetEnd="@+id/explode" >
-        <OnClick />
+        <OnClick
+            app:clickAction="transitionToEnd"
+            />
     </Transition>
 </MotionScene>
