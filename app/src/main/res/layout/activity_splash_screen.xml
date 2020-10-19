@@ -24,7 +24,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/mars"
         />
-
+    <ImageView
+        android:id="@+id/triangle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rectangle_shape"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintBottom_toBottomOf="@id/mars"/>
+    <ImageView
+        android:id="@+id/triangle1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rectangle_shape"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintBottom_toBottomOf="@id/mars"/>
+    <ImageView
+        android:id="@+id/triangle2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/rectangle_shape"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintBottom_toBottomOf="@id/mars"/>
    <androidx.constraintlayout.utils.widget.ImageFilterView
        android:id="@+id/mars"
        android:layout_width="500dp"
@@ -36,6 +65,8 @@
        android:translationY="60dp"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintTop_toBottomOf="parent"/>
+
+
     <TextView
         android:id="@+id/welcome"
         android:layout_width="match_parent"
