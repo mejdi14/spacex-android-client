@@ -54,12 +54,11 @@
         app:layout_constraintStart_toStartOf="@id/mars"
         app:layout_constraintEnd_toEndOf="@id/mars"
         app:layout_constraintBottom_toBottomOf="@id/mars"/>
-   <androidx.constraintlayout.utils.widget.ImageFilterView
+   <ImageView
        android:id="@+id/mars"
        android:layout_width="500dp"
        android:layout_height="500dp"
        android:src="@drawable/round_shape"
-       app:altSrc="@drawable/simple_shape"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        android:translationY="60dp"
