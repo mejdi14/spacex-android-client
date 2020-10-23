@@ -1,0 +1,13 @@
+query AllLaunchDetails {
+    launches {
+        id
+        site
+        mission {
+            name
+            missionPatch(size:LARGE)
+        }
+        links{article_link
+            wikipedia
+            youtube_id}
+    }
+}

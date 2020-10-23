@@ -1,5 +1,6 @@
 package com.example.spacex.ui.activity
 
+import AllLaunchDetailsQuery
 import LaunchDetailsQuery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -52,13 +53,13 @@ class NewsActivity : AppCompatActivity() {
 
         scope.launch {
             val response = try {
-                client.query(LaunchDetailsQuery(id = "1")).toDeferred().await()
+                client.query(AllLaunchDetailsQuery()).toDeferred().await()
             } catch (e: ApolloException) {
                 // handle protocol errors
                 return@launch
             }
 
-            val launch = response.data?.launch
+            val launch = response.data?.launches
             if (launch == null || response.hasErrors()) {
                 // handle application errors
                 return@launch
