@@ -44,6 +44,7 @@ class NewsActivity : AppCompatActivity() {
                         entry {
                             id(hashCode())
                             name(it.name)
+                            description(it.name)
                         }
                     })
                 }
