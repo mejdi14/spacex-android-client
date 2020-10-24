@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#040405"
+    android:background="@color/main_backgroun_color"
     app:layoutDescription="@xml/moon_scene"
     tools:context=".ui.activity.SplashScreen">
 
@@ -58,6 +58,7 @@
        android:id="@+id/mars"
        android:layout_width="500dp"
        android:layout_height="500dp"
+       android:transitionName="transition_image"
        android:src="@drawable/round_shape"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"

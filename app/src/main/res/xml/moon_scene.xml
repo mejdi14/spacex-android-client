@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_bold"
             android:alpha="0"
-            app:layout_constraintTop_toBottomOf="@id/mars"
+            app:layout_constraintTop_toBottomOf="@id/triangle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/cowboy"/>
