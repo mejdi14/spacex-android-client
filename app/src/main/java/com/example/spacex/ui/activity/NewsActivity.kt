@@ -13,6 +13,7 @@ import com.apollographql.apollo.exception.ApolloException
 import com.example.spacex.MyApplication
 import com.example.spacex.R
 import com.example.spacex.data.Entry
+import com.example.spacex.data.Launch
 import com.example.spacex.epoxy.entry
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
@@ -39,16 +40,7 @@ class NewsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         epoxyList = findViewById(R.id.epoxyList)
 
-                epoxyList.withModels {
-                    entries.forEach(fun(it: Entry) {
-                        Log.d("how many", ":${it} ")
-                        entry {
-                            id(hashCode())
-                            name(it.name)
-                            description(it.name)
-                        }
-                    })
-                }
+
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
         scope.launch {
@@ -59,12 +51,23 @@ class NewsActivity : AppCompatActivity() {
                 return@launch
             }
 
-            val launch = response.data?.launches
-            if (launch == null || response.hasErrors()) {
+            val launches = response.data?.launches
+            if (launches == null || response.hasErrors()) {
                 // handle application errors
                 return@launch
+            } else {
+                epoxyList.withModels {
+                    launches.forEach(fun(it: AllLaunchDetailsQuery.Launch?) {
+                        Log.d("how many", ":${it} ")
+                        entry {
+                            id(hashCode())
+                            name(it?.site)
+                            description(it?.id)
+                        }
+                    })
+                }
             }
-            Log.d("lauches", "onCreate: " + launch)
+
 
             // launch now contains a typesafe model of your data
             // println("Launch site: ${launches.id}")
