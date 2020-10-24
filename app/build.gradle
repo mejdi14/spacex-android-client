@@ -66,6 +66,7 @@ dependencies {
     implementation "com.airbnb.android:epoxy:4.1.0"
     kapt "com.airbnb.android:epoxy-processor:4.1.0"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
 }
 
 
