@@ -2,6 +2,7 @@ query LaunchDetails($id:ID!) {
     launch(id: $id) {
         id
         site
+        launch_year
         mission {
             name
             missionPatch(size:LARGE)
