@@ -10,16 +10,32 @@
     tools:context=".ui.activity.NewsActivity">
 <ImageView
     android:id="@+id/profile_photo"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
     android:transitionName="transition_image"
     android:scaleType="fitCenter"
     android:background="@drawable/round_shape"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/epoxyList"
+    app:layout_constraintBottom_toTopOf="@id/description"
     />
 
+    <TextView
+
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Launches News"
+        android:textColor="@color/white"
+        android:textSize="34dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/futura_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_photo"
+        app:layout_constraintBottom_toTopOf="@id/epoxyList"
+        />
 
     <com.airbnb.epoxy.EpoxyRecyclerView
         android:id="@+id/epoxyList"
@@ -28,6 +44,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_photo" />
+        app:layout_constraintTop_toBottomOf="@id/description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

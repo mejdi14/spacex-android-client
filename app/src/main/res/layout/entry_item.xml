@@ -10,25 +10,54 @@
     android:layout_marginLeft="10dp">
 
     <TextView
-        android:id="@+id/entry_name_item"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/launch_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="20dp"
-        android:gravity="center"
+        android:textSize="16dp"
         android:textColor="@color/white"
+        android:fontFamily="@font/futura_bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="30dp" />
+        app:layout_constraintStart_toEndOf="@id/launch_name"
+        android:layout_marginRight="10dp"
+        />
+
     <TextView
-        android:id="@+id/entry_discription_item"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/launch_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="20dp"
-        android:gravity="top"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/futura_bold"
         android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/launch_date"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="30dp" />
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/mission_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="18dp"
+        android:fontFamily="@font/futura_bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/launch_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp" />
+
+    <ImageView
+        android:id="@+id/padge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/mission_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mission_name"
+
+
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
