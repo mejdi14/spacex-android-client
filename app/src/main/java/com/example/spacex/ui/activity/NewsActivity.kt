@@ -62,7 +62,9 @@ class NewsActivity : AppCompatActivity() {
                         entry {
                             id(hashCode())
                             name(it?.site)
-                            description(it?.id)
+                            date(it?.launch_year)
+                            imageUrl(it?.mission?.missionPatch)
+                            mission(it?.mission?.name)
                         }
                     })
                 }
