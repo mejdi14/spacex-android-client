@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Launches News"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="34dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"

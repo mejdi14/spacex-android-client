@@ -27,7 +27,7 @@ class ExampleInstrumentedTest {
 
     @Test
     fun simpleTest() {
-        onView(withId(R.id.bottom_moon)).check(matches(isDisplayed()))
+        onView(withId(R.id.mars)).check(matches(isDisplayed()))
     }
     @Test
     fun useAppContext() {

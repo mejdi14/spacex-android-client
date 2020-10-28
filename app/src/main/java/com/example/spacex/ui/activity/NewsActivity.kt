@@ -62,7 +62,7 @@ class NewsActivity : AppCompatActivity() {
                         entry {
                             id(hashCode())
                             name(it?.site)
-                            date(it?.launch_year)
+                            date(it?.launch_date_utc.toString())
                             imageUrl(it?.mission?.missionPatch)
                             mission(it?.mission?.name)
                         }
