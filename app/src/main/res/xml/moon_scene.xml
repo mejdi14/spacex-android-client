@@ -102,15 +102,6 @@
     </Constraint>
         <Constraint
             android:id="@+id/triangle"
-            android:layout_width="210dp"
-            android:layout_height="210dp"
-            app:layout_constraintTop_toTopOf="@id/mars"
-            app:layout_constraintStart_toStartOf="@id/mars"
-            app:layout_constraintEnd_toEndOf="@id/mars"
-            app:layout_constraintBottom_toBottomOf="@id/mars"
-            />
-        <Constraint
-            android:id="@+id/triangle1"
             android:layout_width="1000dp"
             android:layout_height="1000dp"
             app:layout_constraintTop_toTopOf="@id/mars"
@@ -119,34 +110,26 @@
             app:layout_constraintBottom_toBottomOf="@id/mars"
             />
         <Constraint
-            android:id="@+id/triangle2"
+            android:id="@+id/triangle1"
             android:layout_width="2000dp"
             android:layout_height="2000dp"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="@id/mars"
             app:layout_constraintStart_toStartOf="@id/mars"
             app:layout_constraintEnd_toEndOf="@id/mars"
             app:layout_constraintBottom_toBottomOf="@id/mars"
             />
         <Constraint
-            android:id="@+id/welcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_bold"
-            android:alpha="0"
-            app:layout_constraintTop_toBottomOf="@id/triangle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/cowboy"/>
-        <Constraint
-            android:id="@+id/cowboy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_bold"
-            android:alpha="0"
-            app:layout_constraintTop_toBottomOf="@id/welcome"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:id="@+id/triangle2"
+            android:layout_width="3000dp"
+            android:layout_height="3000dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/mars"
+            app:layout_constraintStart_toStartOf="@id/mars"
+            app:layout_constraintEnd_toEndOf="@id/mars"
+            app:layout_constraintBottom_toBottomOf="@id/mars"
+            />
+
     </ConstraintSet>
     <Transition
         android:id="@+id/second"

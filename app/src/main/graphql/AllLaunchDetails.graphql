@@ -3,6 +3,7 @@ query AllLaunchDetails {
         id
         site
         launch_year
+        launch_date_utc
         mission {
             name
             missionPatch(size:LARGE)
