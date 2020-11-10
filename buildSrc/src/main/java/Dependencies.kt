@@ -4,6 +4,7 @@ object Versions{
  val retrofit_converter_gson = "17.5.0"
  val glide = "4.11.0"
  val epoxy = "4.1.0"
+ val epoxy_processor = "4.1.0"
 
 }
 
@@ -13,4 +14,5 @@ val firebase_analytics = "com.google.firebase:firebase-analytics-ktx:${Versions.
  val retrofit_converter_gson =  "com.squareup.retrofit2:converter-gson:${Versions.retrofit_converter_gson}"
  val glide =  "com.github.bumptech.glide:glide:${Versions.glide}"
  val epoxy =  "com.airbnb.android:epoxy:${Versions.epoxy}"
+ val epoxy_processor =  "com.airbnb.android:epoxy-processor:${Versions.epoxy_processor}"
 }
