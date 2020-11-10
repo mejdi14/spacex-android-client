@@ -63,11 +63,11 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.28-alpha"
     kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
     implementation (Deps.firebase_analytics)
-    implementation "com.airbnb.android:epoxy:4.1.0"
+    implementation (Deps.epoxy)
     kapt "com.airbnb.android:epoxy-processor:4.1.0"
     implementation(Deps.recyclerView)
-    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation (Deps.retrofit_converter_gson)
+    implementation (Deps.glide)
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }
 
