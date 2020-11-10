@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#040405"
+    android:background="@color/main_backgroun_color"
     app:layoutDescription="@xml/moon_scene"
     tools:context=".ui.activity.SplashScreen">
 
