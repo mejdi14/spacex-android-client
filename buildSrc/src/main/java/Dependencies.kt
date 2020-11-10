@@ -5,6 +5,8 @@ object Versions{
  val glide = "4.11.0"
  val epoxy = "4.1.0"
  val epoxy_processor = "4.1.0"
+ val dagger_hilt = "2.28-alpha"
+ val dagger_hilt_compiler = "2.28-alpha"
 
 }
 
@@ -15,4 +17,6 @@ val firebase_analytics = "com.google.firebase:firebase-analytics-ktx:${Versions.
  val glide =  "com.github.bumptech.glide:glide:${Versions.glide}"
  val epoxy =  "com.airbnb.android:epoxy:${Versions.epoxy}"
  val epoxy_processor =  "com.airbnb.android:epoxy-processor:${Versions.epoxy_processor}"
+ val dagger_hilt =  "com.google.dagger:hilt-android:${Versions.dagger_hilt}"
+ val dagger_hilt_compiler =  "com.google.dagger:hilt-android-compiler:${Versions.dagger_hilt_compiler}"
 }
