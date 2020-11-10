@@ -42,11 +42,11 @@ abstract class EntryModel() : EpoxyModelWithHolder1<EntryModel.EntryHolder>() {
         holder.launch_name.text = name
         holder.launch_date.text = date
         holder.launch_mission.text = mission
-        Glide
+        /*Glide
             .with(holder.bedge)
             .load(imageUrl)
             .centerCrop()
-            .into(holder?.bedge)
+            .into(holder?.bedge)*/
     }
 
     inner class EntryHolder: EpoxyHolder() {

@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#040405"
+    android:background="@color/main_backgroun_color"
     app:layoutDescription="@xml/moon_scene"
     tools:context=".ui.activity.SplashScreen">
 
@@ -19,7 +19,6 @@
         android:textSize="60dp"
         android:gravity="center"
         android:visibility="gone"
-
         android:fontFamily="@font/space_font"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +34,6 @@
         android:src="@drawable/rectangle_green_shape"
         android:layout_marginBottom="30dp"
         android:visibility="gone"
-
         app:layout_constraintTop_toTopOf="@id/mars"
         app:layout_constraintStart_toStartOf="@id/mars"
         app:layout_constraintEnd_toEndOf="@id/mars"
@@ -71,6 +69,7 @@
         android:layout_marginTop="35dp"
         android:textColor="@color/black"
         android:gravity="center"
+        android:fontFamily="@font/amiri_bold"
         app:layout_constraintTop_toBottomOf="@id/mars"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -84,6 +83,7 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:textSize="30dp"
+        android:fontFamily="@font/amiri_bold"
         app:layout_constraintTop_toBottomOf="@id/welcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -98,8 +98,4 @@
        android:translationY="60dp"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintTop_toBottomOf="parent"/>
-
-
-
-
 </androidx.constraintlayout.motion.widget.MotionLayout>
