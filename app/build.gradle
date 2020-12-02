@@ -68,6 +68,7 @@ dependencies {
     implementation(Deps.recyclerView)
     implementation (Deps.retrofit_converter_gson)
     implementation (Deps.glide)
+    implementation 'com.airbnb.android:lottie:3.5.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }
 

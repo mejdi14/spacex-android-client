@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/collapsed"
+        app:constraintSetStart="@id/expanded"
+        app:duration="200">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/epoxyList"
+            app:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/expanded">
+        <Constraint
+            android:id="@+id/epoxyList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+        <Constraint
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Launches News"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            android:alpha="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/amiri_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_photo"
+            app:layout_constraintBottom_toTopOf="@id/epoxyList"
+            />
+        <Constraint
+            android:id="@+id/profile_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:transitionName="transition_image"
+            android:scaleType="fitCenter"
+            android:background="@drawable/round_shape"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_fileName="planet.json"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="false" />
+        <Constraint
+            android:id="@+id/loading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="please wait for the data"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/amiri_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/collapsed">
+
+
+        <Constraint
+            android:id="@+id/epoxyList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Launches News"
+            android:textColor="@color/black"
+            android:textSize="34dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/amiri_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_photo"
+            app:layout_constraintBottom_toTopOf="@id/epoxyList"
+            />
+        <Constraint
+            android:id="@+id/profile_photo"
+            android:layout_width="440dp"
+            android:layout_height="440dp"
+            android:transitionName="transition_image"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            android:background="@drawable/round_shape"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_fileName="planet.json"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="false" />
+        <Constraint
+            android:id="@+id/loading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="please wait for the data"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/amiri_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </ConstraintSet>
+</MotionScene>
