@@ -83,6 +83,7 @@ class NewsActivity : AppCompatActivity() {
     }
 
     private fun showLottieAnimation() {
+
         animation_view.playAnimation()
     }
 

@@ -10,6 +10,15 @@
     app:layoutDescription="@xml/moon_scene"
     tools:context=".ui.activity.SplashScreen">
 
+    <ImageView
+        android:id="@+id/stars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"

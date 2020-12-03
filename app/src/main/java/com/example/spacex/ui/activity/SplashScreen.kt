@@ -7,6 +7,7 @@ import android.os.Handler
 import android.util.Log
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.core.app.ActivityOptionsCompat
+import com.bumptech.glide.Glide
 import com.example.spacex.R
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
@@ -15,6 +16,7 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
        // showTheMoonManWithMagic()
+        Glide.with(this).load(R.drawable.stars).into(stars)
         Handler().postDelayed({
             startAnimation()
         }, 2000)
