@@ -44,10 +44,12 @@ class SplashScreen : AppCompatActivity() {
     }
 
     private fun startSecondPartAnimation() {
+        Glide.with(this).load(R.drawable.cubes).into(gif_image)
         motion.transitionToState(R.id.explode)
         motion.setTransitionListener(object : MotionLayout.TransitionListener {
             override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
                 Log.d("nice", "onTransitionStarted: ")
+                triangle.animate().rotation(180f).setDuration(2000).start()
             }
 
             override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
@@ -67,7 +69,7 @@ class SplashScreen : AppCompatActivity() {
     }
 
     private fun startTheFuckingParty() {
-        Glide.with(this).load(R.drawable.space_boy).into(gif_image)
+
 
     }
 
