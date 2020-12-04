@@ -15,8 +15,7 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-       // showTheMoonManWithMagic()
-        Glide.with(this).load(R.drawable.stars).into(stars)
+        // showTheMoonManWithMagic()
         Handler().postDelayed({
             startAnimation()
         }, 2000)
@@ -46,7 +45,7 @@ class SplashScreen : AppCompatActivity() {
 
     private fun startSecondPartAnimation() {
         motion.transitionToState(R.id.explode)
-            motion.setTransitionListener(object : MotionLayout.TransitionListener {
+        motion.setTransitionListener(object : MotionLayout.TransitionListener {
             override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
                 Log.d("nice", "onTransitionStarted: ")
             }
@@ -56,7 +55,8 @@ class SplashScreen : AppCompatActivity() {
             }
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                startNewsActivity()
+             //   startNewsActivity()
+                startTheFuckingParty()
             }
 
             override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
@@ -66,10 +66,15 @@ class SplashScreen : AppCompatActivity() {
         })
     }
 
+    private fun startTheFuckingParty() {
+        Glide.with(this).load(R.drawable.space_boy).into(gif_image)
+
+    }
+
     private fun startNewsActivity() {
         val intent = Intent(this, NewsActivity::class.java)
-        val options = ActivityOptionsCompat.
-        makeSceneTransitionAnimation(this, mars, "transition_image")
+        val options =
+            ActivityOptionsCompat.makeSceneTransitionAnimation(this, mars, "transition_image")
         startActivity(intent, options.toBundle())
     }
 
