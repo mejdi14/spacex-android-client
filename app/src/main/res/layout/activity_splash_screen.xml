@@ -94,8 +94,8 @@
         android:layout_height="wrap_content"
         android:text="welcome "
         android:textSize="30dp"
-        android:layout_marginTop="35dp"
         android:textColor="@color/white"
+        android:fontFamily="@font/amiri_bold"
         android:gravity="center"
         android:alpha="0"
         app:layout_constraintTop_toBottomOf="@id/mars"
@@ -109,11 +109,97 @@
         android:text="space cowboy"
         android:layout_marginTop="35dp"
         android:textColor="@color/white"
+        android:fontFamily="@font/amiri_bold"
         android:gravity="center"
         android:textSize="30dp"
         android:alpha="0"
         app:layout_constraintTop_toBottomOf="@id/welcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/big_mars"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/round_shape"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        android:alpha="0"
+
+        app:layout_constraintBottom_toBottomOf="@id/mars"
+        app:layout_constraintTop_toTopOf="@id/mars" />
+
+    <ImageView
+        android:id="@+id/yellow_cercle"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:src="@drawable/round_yellow_shape"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        android:alpha="0"
+
+        app:layout_constraintBottom_toBottomOf="@id/mars"
+        app:layout_constraintTop_toTopOf="@id/mars" />
+
+    <ImageView
+        android:id="@+id/white_cercle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/round_white_shape"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        android:alpha="0"
+
+        app:layout_constraintBottom_toBottomOf="@id/mars"
+        app:layout_constraintTop_toTopOf="@id/mars" />
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D73E3F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/japan_holder"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:background="@drawable/round_white_shape"
+        android:src="@drawable/ic_japan_symbol"
+        android:padding="100dp"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        android:alpha="0"
+
+        app:layout_constraintBottom_toBottomOf="@id/mars"
+        app:layout_constraintTop_toTopOf="@id/mars" />
+
+    <ImageView
+        android:id="@+id/extra_border"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/extra_round_border_shape"
+        android:layout_marginBottom="30dp"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintBottom_toBottomOf="@id/mars"/>
+
+    <ImageView
+        android:id="@+id/extra_border2"
+        android:layout_width="430dp"
+        android:layout_height="430dp"
+        android:src="@drawable/extra_round_border_shape"
+        android:layout_marginBottom="30dp"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="@id/mars"
+        app:layout_constraintStart_toStartOf="@id/mars"
+        app:layout_constraintEnd_toEndOf="@id/mars"
+        app:layout_constraintBottom_toBottomOf="@id/mars"/>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

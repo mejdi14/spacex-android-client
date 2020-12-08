@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/news_scene"
-    android:background="#1d1f25"
+    android:background="#000000"
     tools:context=".ui.activity.NewsActivity">
 <ImageView
     android:id="@+id/profile_photo"
