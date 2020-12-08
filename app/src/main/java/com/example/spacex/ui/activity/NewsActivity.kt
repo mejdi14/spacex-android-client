@@ -5,12 +5,14 @@ import LaunchDetailsQuery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.airbnb.epoxy.EpoxyController
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.coroutines.toDeferred
 import com.apollographql.apollo.exception.ApolloException
 import com.example.spacex.MyApplication
+import com.example.spacex.MyApplication_HiltComponents
 import com.example.spacex.R
 import com.example.spacex.data.Entry
 import com.example.spacex.data.Launch
@@ -38,6 +40,7 @@ class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        showLottieAnimation()
         epoxyList = findViewById(R.id.epoxyList)
 
 
@@ -56,6 +59,9 @@ class NewsActivity : AppCompatActivity() {
                 // handle application errors
                 return@launch
             } else {
+                animation_view.pauseAnimation()
+                animation_view.visibility = View.INVISIBLE
+                loading_text.visibility = View.INVISIBLE
                 epoxyList.withModels {
                     launches.forEach(fun(it: AllLaunchDetailsQuery.Launch?) {
                         Log.d("how many", ":${it} ")
@@ -74,6 +80,11 @@ class NewsActivity : AppCompatActivity() {
             // launch now contains a typesafe model of your data
             // println("Launch site: ${launches.id}")
         }
+    }
+
+    private fun showLottieAnimation() {
+
+        animation_view.playAnimation()
     }
 
 

@@ -1,7 +1,7 @@
 object Versions{
  val recyclerView = "1.1.0"
  val firebase_analytics = "17.5.0"
- val retrofit_converter_gson = "17.5.0"
+ val retrofit_converter_gson = "2.9.0"
  val glide = "4.11.0"
  val epoxy = "4.1.0"
  val epoxy_processor = "4.1.0"

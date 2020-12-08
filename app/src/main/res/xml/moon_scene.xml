@@ -71,37 +71,55 @@
         </Constraint>
     </ConstraintSet>
     <ConstraintSet android:id="@+id/explode" >
-    <Constraint
-        android:id="@+id/text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fontFamily="@font/space_font"
-        android:gravity="center"
-        android:text="S\nP\nA\nC\nE\nX"
-        android:textColor="#FFFFFF"
-        android:textSize="60dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/mars"
-        app:layout_constraintEnd_toEndOf="@id/mars"
-        app:layout_constraintStart_toStartOf="@id/mars"
-        app:layout_constraintTop_toTopOf="@id/mars"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp" />
+        <Constraint
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/space_font"
+            android:gravity="center"
+            android:text="S\nP\nA\nC\nE\nX"
+            android:textColor="#FFFFFF"
+            android:textSize="60dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/mars"
+            app:layout_constraintEnd_toEndOf="@id/mars"
+            app:layout_constraintStart_toStartOf="@id/mars"
+            app:layout_constraintTop_toTopOf="@id/mars"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp" />
 
-    <Constraint
-        android:id="@+id/mars"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-         >
+        <Constraint
+            android:id="@+id/mars"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
 
-    </Constraint>
+        </Constraint>
         <Constraint
             android:id="@+id/triangle"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            app:layout_constraintTop_toTopOf="@id/mars"
+            app:layout_constraintStart_toStartOf="@id/mars"
+            app:layout_constraintEnd_toEndOf="@id/mars"
+            app:layout_constraintBottom_toBottomOf="@id/mars"
+            />
+        <Constraint
+            android:id="@+id/border_circle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/round_border_shape"
+            app:layout_constraintTop_toTopOf="@id/mars"
+            app:layout_constraintStart_toStartOf="@id/mars"
+            app:layout_constraintEnd_toEndOf="@id/mars"
+            app:layout_constraintBottom_toBottomOf="@id/mars"/>
+        <Constraint
+            android:id="@+id/triangle1"
             android:layout_width="1000dp"
             android:layout_height="1000dp"
             app:layout_constraintTop_toTopOf="@id/mars"
@@ -110,26 +128,34 @@
             app:layout_constraintBottom_toBottomOf="@id/mars"
             />
         <Constraint
-            android:id="@+id/triangle1"
+            android:id="@+id/triangle2"
             android:layout_width="2000dp"
             android:layout_height="2000dp"
-            android:visibility="gone"
             app:layout_constraintTop_toTopOf="@id/mars"
             app:layout_constraintStart_toStartOf="@id/mars"
             app:layout_constraintEnd_toEndOf="@id/mars"
             app:layout_constraintBottom_toBottomOf="@id/mars"
             />
         <Constraint
-            android:id="@+id/triangle2"
-            android:layout_width="3000dp"
-            android:layout_height="3000dp"
-            android:visibility="gone"
-            app:layout_constraintTop_toTopOf="@id/mars"
-            app:layout_constraintStart_toStartOf="@id/mars"
-            app:layout_constraintEnd_toEndOf="@id/mars"
-            app:layout_constraintBottom_toBottomOf="@id/mars"
-            />
-
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_bold"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/triangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cowboy"/>
+        <Constraint
+            android:id="@+id/cowboy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_bold"
+            android:alpha="0"
+            app:layout_constraintTop_toBottomOf="@id/welcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </ConstraintSet>
     <Transition
         android:id="@+id/second"
