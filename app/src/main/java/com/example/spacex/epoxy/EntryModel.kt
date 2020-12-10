@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.example.spacex.R
 import com.example.spacex.function.getListColors
+import com.example.spacex.function.upperTheFirstLetter
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.android.synthetic.main.entry_item.view.*
 import java.lang.System.load
@@ -47,7 +48,7 @@ abstract class EntryModel() : EpoxyModelWithHolder1<EntryModel.EntryHolder>() {
 
     override fun bind(holder: EntryHolder) {
 
-        holder.launch_name.text = name.toString().toLowerCase()
+        holder.launch_name.text = name.toString().upperTheFirstLetter()
         holder.launch_date.text = date
         holder.launch_mission.text = "mission name: ${mission}"
 

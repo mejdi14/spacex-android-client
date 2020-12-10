@@ -77,8 +77,6 @@ class NewsActivity : AppCompatActivity() {
             }
 
 
-            // launch now contains a typesafe model of your data
-            // println("Launch site: ${launches.id}")
         }
     }
 
