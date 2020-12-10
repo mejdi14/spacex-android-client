@@ -59,7 +59,7 @@ class SplashScreen : AppCompatActivity() {
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
 
-             //   startNewsActivity()
+                //   startNewsActivity()
                 startTheFuckingParty()
             }
 
@@ -86,7 +86,7 @@ class SplashScreen : AppCompatActivity() {
             }, 200)
 
             Handler().postDelayed({
-               white_cercle.alpha = 1f
+                white_cercle.alpha = 1f
             }, 400)
             Handler().postDelayed({
                 flag.alpha = 1f
@@ -156,7 +156,7 @@ class SplashScreen : AppCompatActivity() {
                     Glide.with(this).clear(gif_image)
                     white_cercle.animate().alpha(0f).setDuration(300).withEndAction {
                         Handler().postDelayed({
-                           startNewsActivity()
+                            startNewsActivity()
 
 
                         }, 1000)
@@ -165,9 +165,6 @@ class SplashScreen : AppCompatActivity() {
 
 
             }, 2500)
-
-
-
 
 
         }

@@ -31,8 +31,10 @@ import com.airbnb.epoxy.EpoxyModelWithHolder as EpoxyModelWithHolder1
 abstract class EntryModel() : EpoxyModelWithHolder1<EntryModel.EntryHolder>() {
     @EpoxyAttribute
     var name: CharSequence? = ""
+
     @EpoxyAttribute
     var mission: CharSequence? = ""
+
     @EpoxyAttribute
     var date: CharSequence? = ""
 
@@ -50,16 +52,14 @@ abstract class EntryModel() : EpoxyModelWithHolder1<EntryModel.EntryHolder>() {
         holder.launch_mission.text = "mission name: ${mission}"
 
         val background: Drawable = holder.container.background
-        changingBackgroundColor(background, Color.parseColor(getListColors().get(Random.nextInt(0,7))))
+        changingBackgroundColor(
+            background,
+            Color.parseColor(getListColors().get(Random.nextInt(0, 7)))
+        )
 
-        /*Glide
-            .with(holder.bedge)
-            .load(imageUrl)
-            .centerCrop()
-            .into(holder?.bedge)*/
     }
 
-    inner class EntryHolder: EpoxyHolder() {
+    inner class EntryHolder : EpoxyHolder() {
         lateinit var launch_name: TextView
         lateinit var container: ConstraintLayout
         lateinit var launch_date: TextView
@@ -76,7 +76,6 @@ abstract class EntryModel() : EpoxyModelWithHolder1<EntryModel.EntryHolder>() {
 
 
     }
-
 
 
     private fun changeColorForView(view: View, color: String) {
