@@ -1,0 +1,12 @@
+query AllLaunchDetails {
+    launches {
+        id
+        site
+        launch_year
+        launch_date_utc
+        mission {
+            name
+
+        }
+    }
+}
