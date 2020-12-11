@@ -67,6 +67,7 @@ class NewsActivity : AppCompatActivity() {
                 animation_view.pauseAnimation()
                 animation_view.visibility = View.INVISIBLE
                 loading_text.visibility = View.INVISIBLE
+                falcon.visibility = View.VISIBLE
                 epoxyList.withModels {
                     launches.forEach(fun(it: AllLaunchDetailsQuery.Launch?) {
                         Log.d("how many", ":${it} ")

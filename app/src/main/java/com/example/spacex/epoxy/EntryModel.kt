@@ -48,9 +48,9 @@ abstract class EntryModel() : EpoxyModelWithHolder1<EntryModel.EntryHolder>() {
 
     override fun bind(holder: EntryHolder) {
 
-        holder.launch_name.text = name.toString().upperTheFirstLetter()
+        holder.launch_name.text = mission.toString().upperTheFirstLetter()
         holder.launch_date.text = date
-        holder.launch_mission.text = "mission name: ${mission}"
+        holder.launch_mission.text = "launche site: ${name.toString().upperTheFirstLetter()}"
 
         val background: Drawable = holder.container.background
         changingBackgroundColor(

@@ -29,7 +29,7 @@
         android:fontFamily="@font/amiri_bold"
         android:text="TextView"
         android:textColor="@color/black"
-        android:textSize="26dp"
+        android:textSize="27dp"
         app:layout_constraintBottom_toTopOf="@id/mission_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
         android:fontFamily="@font/amiri_medium"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/launch_name" />
 
