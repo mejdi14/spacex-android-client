@@ -46,11 +46,15 @@ class NewsActivity : AppCompatActivity() {
 
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
+        fetchDataFromServer(scope)
+    }
+
+    private fun fetchDataFromServer(scope: CoroutineScope) {
         scope.launch {
             val response = try {
                 client.query(AllLaunchDetailsQuery()).toDeferred().await()
             } catch (e: ApolloException) {
-                // handle protocol errors
+                fetchDataFromServer(this)
                 return@launch
             }
 

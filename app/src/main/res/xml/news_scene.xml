@@ -44,6 +44,18 @@
             app:layout_constraintBottom_toTopOf="@id/epoxyList"
             />
         <Constraint
+            android:id="@+id/falcon"
+            android:layout_width="50dp"
+            android:layout_height="250dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/falcon_heavy_render"
+            android:scaleType="fitXY"
+            android:translationX="0dp"
+            app:layout_constraintTop_toTopOf="@id/epoxyList"
+            app:layout_constraintBottom_toTopOf="@id/epoxyList"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <Constraint
             android:id="@+id/profile_photo"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -122,6 +134,19 @@
             app:layout_constraintTop_toBottomOf="@id/profile_photo"
             app:layout_constraintBottom_toTopOf="@id/epoxyList"
             />
+
+        <Constraint
+            android:id="@+id/falcon"
+            android:layout_width="50dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/falcon_heavy_render"
+            android:scaleType="fitXY"
+            android:translationX="500dp"
+            app:layout_constraintTop_toTopOf="@id/epoxyList"
+            app:layout_constraintBottom_toTopOf="@id/epoxyList"
+            app:layout_constraintEnd_toEndOf="parent"/>
         <Constraint
             android:id="@+id/profile_photo"
             android:layout_width="440dp"

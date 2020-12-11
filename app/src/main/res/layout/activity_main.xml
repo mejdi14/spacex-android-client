@@ -40,6 +40,18 @@
         app:layout_constraintBottom_toTopOf="@id/epoxyList"
         />
 
+    <ImageView
+        android:id="@+id/falcon"
+        android:layout_width="50dp"
+        android:layout_height="250dp"
+        android:src="@drawable/falcon_heavy_render"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@id/epoxyList"
+        app:layout_constraintBottom_toTopOf="@id/epoxyList"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
     <com.airbnb.epoxy.EpoxyRecyclerView
         android:id="@+id/epoxyList"
         android:layout_width="0dp"
