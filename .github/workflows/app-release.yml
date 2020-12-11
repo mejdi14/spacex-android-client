@@ -30,8 +30,12 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: GitHub Action for ktlint
-        uses: yutailang0119/action-ktlint@v1.0.0
+      - name: run ktlint
+          run: |
+            ktlint --reporter=checkstyle,output=build/ktlint-report-in-checkstyle-format.xml
+      - uses: yutailang0119/action-ktlint@v1.0.0
+        with:
+          xml_path: build/ktlint-report-in-checkstyle-format.xml
 
 
   apk:
