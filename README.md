@@ -30,6 +30,11 @@
 - Epoxy
 - Dagger Hilt
 - Github Actions
+
+## Server side
+The GraphQl server is made using NestJs
+server repo: https://github.com/mejdi14/spacex-nestjs-server
+Apollo GraphQl playground: https://spacex-nestjs-server.herokuapp.com/graphql
 	
 ## 🤝 Contributing
 
