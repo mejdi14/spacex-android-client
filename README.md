@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/rocket_logo.png" height="300" width="300" >
+<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/rocket_logo.png" height="400" width="200" >
 	</p>
 	
 
