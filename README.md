@@ -1,5 +1,5 @@
 # spacex-android-client
-<h1 align="center">Welcome to book swipe 👋</h1>
+<h1 align="center">Welcome to SpaceX app 👋</h1>
 <p align="center">
  <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
@@ -16,20 +16,19 @@
 <img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/rocket_logo.png" height="300" width="300" >
 	</p>
 	
-## :art:Credits
-- Many thanks to : [@Marta Skowron](https://dribbble.com/skowrony) for the amazing design
+
 
 ## ✨ Demo
 <p align="center">
-<img src="https://github.com/mejdi14/BooksSwipe/blob/master/images/preview.gif" height="400" width="550" >
+<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/app_demo.gif" height="400" width="550" >
 	</p>
 	
 	
 ## Technologies
 - kotlin
-- ViewPager2
-- Git Flow (with GitKraken)
-- ArgbEvaluator
+- Apollo Graphql
+- Epoxy
+- Dagger Hilt
 - Github Actions
 	
 ## 🤝 Contributing
@@ -42,7 +41,7 @@ Feel free to check [issues page] if you want to contribute.<br />
 
 👤 **Mejdi Hafiane**
 
-- FaceBook: [@MejdiHafiane](https://www.facebook.com/mejdi.marshall)
+- FaceBook: [@MejdiHafiane](https://twitter.com/mejdi141)
 
 ## Show your support
 
