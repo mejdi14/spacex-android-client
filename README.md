@@ -13,14 +13,14 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/rocket_logo.png" height="400" width="200" >
+<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/rocket_logo.png" height="300" width="300" >
 	</p>
 	
 
 
 ## ✨ Demo
 <p align="center">
-<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/app_demo.gif" height="400" width="550" >
+<img src="https://github.com/mejdi14/spacex-android-client/blob/master/images/app_demo.gif" height="600" width="300" >
 	</p>
 	
 	
