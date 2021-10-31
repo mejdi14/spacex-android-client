@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class LaunchesRespository {
     lateinit var client: ApolloClient
-    fun fetchLaunches(){
+    fun fetchLaunches() {
         val scope = CoroutineScope(Dispatchers.Main + Job())
 
         scope.launch {

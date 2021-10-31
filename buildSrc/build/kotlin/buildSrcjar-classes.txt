@@ -1,1 +1,1 @@
-/Users/mejdihafiene/development/projects/spacex-android-client/buildSrc/build/classes/kotlin/main/Deps.class:/Users/mejdihafiene/development/projects/spacex-android-client/buildSrc/build/classes/kotlin/main/Versions.class
+C:\projects\spacex\spacex-android-client\buildSrc\build\classes\kotlin\main\Deps.class;C:\projects\spacex\spacex-android-client\buildSrc\build\classes\kotlin\main\Versions.class

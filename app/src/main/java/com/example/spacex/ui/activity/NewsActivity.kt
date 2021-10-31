@@ -1,32 +1,21 @@
 package com.example.spacex.ui.activity
 
 import AllLaunchDetailsQuery
-import LaunchDetailsQuery
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.airbnb.epoxy.EpoxyController
+import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.apollographql.apollo.ApolloClient
-import com.apollographql.apollo.coroutines.toDeferred
 import com.apollographql.apollo.exception.ApolloException
-import com.example.spacex.MyApplication
-import com.example.spacex.MyApplication_HiltComponents
 import com.example.spacex.R
 import com.example.spacex.data.Entry
-import com.example.spacex.data.Launch
-import com.example.spacex.epoxy.entry
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import java.util.ArrayList
 import java.util.Map.entry
 import javax.inject.Inject
 
