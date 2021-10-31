@@ -38,6 +38,11 @@ class NewsActivity : AppCompatActivity() {
         fetchDataFromServer(scope)
     }
 
+    /**
+     * Fetch data from server using apollo service
+     *
+     * @param scope
+     */
     private fun fetchDataFromServer(scope: CoroutineScope) {
         scope.launch {
             val response = try {
